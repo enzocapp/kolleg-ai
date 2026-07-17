@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  background-color: #141f29;
+  color: #f7f5f0;
+}
+
+/* Textura sutil tipo papel oficial, versión oscura */
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(247, 245, 240, 0.04) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+.stamp {
+  border: 1.5px solid #b8862b;
+  color: #b8862b;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.msg-appear {
+  animation: fade-in-up 0.25s ease-out;
+}
